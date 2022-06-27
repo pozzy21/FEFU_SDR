@@ -1,0 +1,49 @@
+<html>
+<head>
+<script src="wav.js"></script>
+<script src="dsp.js"></script>
+
+<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>-->
+
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="input-group">
+					<span class="input-group-btn">
+						<span class="btn btn-default btn-file">
+							Browse&hellip; <input type="file" id="fileInput">
+						</span>
+					</span>
+					<em><input type="text" class="form-control" id="fileName" readonly></em>
+				</div>
+			</div>
+			<div class="col-md-1">
+				<div class="spinner-loader" id="spinner" style="visibility:hidden">
+				  Loading…
+				</div>
+			</div>
+			<div class="col-md-3" id="buttons" style="visibility:hidden">
+				<input value="ИК-канал" class="btn btn-default" type="button" onclick="viewA()">
+				<input value="Видимый" class="btn btn-default"type="button" onclick="viewB()">
+				<input value="Все" class="btn btn-default" type="button" onclick="viewAB()">
+			</div>
+			<div class="col-md-3">
+				 <div class="alert-small alert-danger" role="alert" id="alert"></div>
+			</div>
+		</div>
+		<!-- Wave viewer isn't necessary anymore, but could be useful later -->
+		<!-- <canvas id="myChart" width="1000" height="400"></canvas></br></br> -->
+		<div class="row">
+			<div class="col-md-4">
+				<canvas id="output" width="850" height="300"  style="padding-top:5"></canvas>
+			</div>
+		</div>
+
+	</div>
+	</br>
+	<script src='apt3000.js'></script>
+</body>
+</html>

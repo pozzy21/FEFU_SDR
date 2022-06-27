@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<!-- TODO: put a nice title in the next line -->
+<title>WebSDR on Vladivostok in FEFU </title>
+<script src="wav.js"></script>
+<script src="dsp.js"></script>
+
+<!--#include file="websdr-head.html"-->
+<style>
+ table {
+	width: 300px; /* Ширина таблицы */
+	border: 1px solid green; /* Рамка вокруг таблицы */
+	margin: auto; /* Выравниваем таблицу по центру окна  */
+ }
+ td {
+	text-align: center; /* Выравниваем текст по центру ячейки */
+ }
+ h2{
+	 	text-align: center;
+ }
+ h4{
+	 text-align: center;
+ }
+
+</style>
+</head>
+
+
+<body onload=bodyonload()>
+
+<h2>WEBSDR, Vladivostok FEFU</h2>
+<h4>Radio and Satellite reciever</h4>
+<p>
+
+<hr>
+
+<!--#include file="websdr-controls.html"-->
+
+<table width = "50%" cellspacing = "0" cellpadding="5">
+	<tr>
+
+	<td width = "100" valign = "top">
+		<h5>Трекинг положения спутника</h5>
+		<script>
+			var norad_n2yo = '33591|NOAA-19, 28654|NOAA-18,42709|NOAA-15';
+			var size_n2yo = 'small';
+			var allpasses_n2yo = '0';
+			var map_n2yo = '2';
+		</script>
+		<script type="text/javascript" src="https://www.n2yo.com/js/widget-tracker.js"></script>
+	</td>
+	<td valign="top">
+		<h5>Последний обработанный снимок</h5>
+		<img width="300" height="300" src="index.jpeg" alt="альтернативный текст">
+		<h6>
+			NOAA-19\10:42PM(UTC)
+		</h6>
+	</td>
+<td>
+    <iframe src="APT3000.html" width="900" height="700" frameborder="1"> </iframe>
+
+</td>
+	</tr>
+  <tr>
+    <td>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
